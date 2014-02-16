@@ -1,7 +1,7 @@
 name: phalconphp
-version: 0.0.3
+version: 0.0.4
 inherits: ruudk/php55@0.0.30
-type: main
+type: service
 platform: ubuntu@12.04
 description: wercker box for php with phalconphp installed
 keywords:
