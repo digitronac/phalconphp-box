@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.0.6
+version: 0.0.7
 inherits: ruudk/php55@0.0.30
 type: service
 platform: ubuntu@12.04
@@ -16,5 +16,4 @@ script: |
   cd cphalcon/ext;
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
   phpize && ./configure --enable-phalcon && make -j4 && sudo make install
-  ls /etc/php5
-  
+  ls -la /etc/php5/cli
