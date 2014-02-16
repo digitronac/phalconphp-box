@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.0.16
+version: 0.0.17
 inherits: ruudk/php55@0.0.30
 type: box
 platform: ubuntu@12.04
@@ -12,11 +12,9 @@ keywords:
 packages:
   - phalconphp@1.2.5
 script: |
-  phpenv global 5.5
-  phpenv config-add project-config.ini
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
   cd cphalcon/ext;
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
   phpize && ./configure --enable-phalcon && make -j4 && sudo make install
-
+  phpenv config-add project-config.ini
   composer show --platform
