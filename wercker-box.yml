@@ -1,6 +1,6 @@
 name: phalconphp
-version: 0.0.17
-inherits: ruudk/php55@0.0.30
+version: 0.0.18
+inherits: wrecker/php
 type: box
 platform: ubuntu@12.04
 description: wercker box for php with phalconphp installed
