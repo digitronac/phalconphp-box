@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.0.14
+version: 0.0.15
 inherits: ruudk/php55@0.0.30
 type: box
 platform: ubuntu@12.04
@@ -12,6 +12,7 @@ keywords:
 packages:
   - phalconphp@1.2.5
 script: |
+  sudo apt-get update
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
   cd cphalcon/ext;
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
