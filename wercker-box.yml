@@ -1,6 +1,6 @@
 name: phalconphp
-version: 0.0.100
-inherits: wrecker/php@1.0.1
+version: 0.0.101
+inherits: wercker/php@1.0.1
 type: box
 platform: ubuntu@12.04
 description: wercker box for php with phalconphp installed
