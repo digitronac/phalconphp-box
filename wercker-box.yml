@@ -1,6 +1,6 @@
 name: phalconphp
-version: 0.0.18
-inherits: wrecker/php
+version: 0.0.1
+inherits: wrecker/php@1.0.1
 type: box
 platform: ubuntu@12.04
 description: wercker box for php with phalconphp installed
@@ -17,4 +17,4 @@ script: |
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
   phpize && ./configure --enable-phalcon && make -j4 && sudo make install
   echo 'extension=phalcon.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  phpenv rehash 
+  phpenv rehash
