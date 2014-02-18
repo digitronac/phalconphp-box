@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.0.101
+version: 0.1.0
 inherits: wercker/php@1.0.1
 type: box
 platform: ubuntu@12.04
@@ -12,6 +12,9 @@ keywords:
 packages:
   - phalconphp@1.2.5
 script: |
+  #imagick
+  echo '\n' | pecl install imagick
+  #phalconphp
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
   cd cphalcon/ext;
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
