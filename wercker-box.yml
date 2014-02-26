@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.1.7
+version: 0.1.8
 inherits: wercker/php@1.0.1
 type: box
 platform: ubuntu@12.04
@@ -12,12 +12,13 @@ keywords:
 packages:
   - phalconphp@1.2.5
 script: |
-  sudo apt-get install libicu48
-  sudo apt-get install libicu-dev
+  # Install php
+  sudo add-apt-repository ppa:ondrej/php5 -y
+  sudo apt-get update -y
+  sudo apt-get install php5 php5-common php5-dev php-pear php5-curl php5-gd php5-cli php5-apcu php5-mcrypt php5-intl php5-xdebug libicu-dev -y
   #imagick
   echo '\n' | pecl install imagick
-  # intl
-  sudo apt-get install php5-intl
+  
   #phalconphp
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
   cd cphalcon/ext;
