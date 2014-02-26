@@ -13,7 +13,7 @@ packages:
   - phalconphp@1.2.5
 script: |
   sudo apt-get install libicu-dev
-  echo '\n' | sudo pecl install intl 
+  echo '\n' | sudo /usr/bin/pecl install intl 
   #imagick
   echo '\n' | pecl install imagick
   
