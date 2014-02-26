@@ -12,6 +12,7 @@ keywords:
 packages:
   - phalconphp@1.2.5
 script: |
+  which pecl
   sudo apt-get install libicu-dev
   echo '\n' | sudo /usr/bin/pecl install intl 
   #imagick
