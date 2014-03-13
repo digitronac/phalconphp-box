@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.1.17
+version: 0.1.18
 inherits: wercker/php@1.0.1
 type: box
 platform: ubuntu@12.04
@@ -18,7 +18,7 @@ script: |
   #imagick
   echo '\n' | pecl install imagick
   #apc
-  sudo apt-cache search apc
+  pecl install apcu
 
   #phalconphp
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
