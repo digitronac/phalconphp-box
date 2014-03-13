@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.1.15
+version: 0.1.16
 inherits: wercker/php@1.0.1
 type: box
 platform: ubuntu@12.04
@@ -18,14 +18,14 @@ script: |
   #imagick
   echo '\n' | pecl install imagick
   #apc
-  echo "\n" | pecl install apc
-  
+  sudo apt-get install php5-apcu
+
   #phalconphp
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
   cd cphalcon/ext;
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
   phpize && ./configure --enable-phalcon && make -j4 && sudo make install
-  echo 'extension=phalcon.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  echo 'extension=apc.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  #echo 'extension=phalcon.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  #echo 'extension=apc.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   #echo 'extension=intl.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   phpenv rehash
