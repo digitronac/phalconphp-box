@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.1.12
+version: 0.1.13
 inherits: wercker/php@1.0.1
 type: box
 platform: ubuntu@12.04
@@ -9,12 +9,12 @@ keywords:
   - php
   - opensource
   - database
-  - php-apc
+  - php5-apc
 packages:
   - phalconphp@1.2.5
 script: |
   sudo apt-get install libicu-dev
-  sudo apt-get install php-apc
+  sudo apt-get install php5-apc
   printf "\n" | pecl install intl 
   #imagick
   echo '\n' | pecl install imagick
