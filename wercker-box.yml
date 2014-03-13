@@ -21,7 +21,7 @@ script: |
   #apc
   echo '\n' | pecl install apcu-beta
   #memcache
-  pecl install memcache
+  echo '\n' | pecl install memcache
 
   #phalconphp
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
