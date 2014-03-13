@@ -18,7 +18,7 @@ script: |
   #imagick
   echo '\n' | pecl install imagick
   #apc
-  pecl install apcu
+  pecl install apcu-beta
 
   #phalconphp
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
