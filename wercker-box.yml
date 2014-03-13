@@ -26,5 +26,6 @@ script: |
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
   phpize && ./configure --enable-phalcon && make -j4 && sudo make install
   echo 'extension=phalcon.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  echo 'extension=apc.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   #echo 'extension=intl.so' >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   phpenv rehash
