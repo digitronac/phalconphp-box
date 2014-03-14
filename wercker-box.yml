@@ -10,7 +10,7 @@ keywords:
   - opensource
   - database
   - apcu
-  - memcache
+  - memcache 
 packages:
   - phalconphp@1.2.5
 script: |
