@@ -10,20 +10,28 @@ keywords:
   - opensource
   - database
   - apcu
-  - memcache 
+  - memcache
+  - igbinary
 packages:
   - phalconphp@1.2.5
 script: |
+  # intl
   sudo apt-get install libicu-dev
-  printf "\n" | pecl install intl 
-  #imagick
+  printf "\n" | pecl install intl
+
+  # imagick
   echo '\n' | pecl install imagick
-  #apc
+
+  # apc
   echo '\n' | pecl install apcu-beta
+
   #memcache
   echo '\n' | pecl install memcache
 
-  #phalconphp 
+  # igbinary
+  echo '\n' | pecl install igbinary
+
+  #phalconphp
   git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
   cd cphalcon/ext;
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
