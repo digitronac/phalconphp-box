@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.2.0
+version: 0.3.0
 inherits: wercker/php@1.0.1
 type: box
 platform: ubuntu@12.04
@@ -13,7 +13,7 @@ keywords:
   - memcache
   - igbinary
 packages:
-  - phalconphp@1.2.5
+  - phalconphp@1.3.0
 script: |
   # intl
   sudo apt-get install libicu-dev
@@ -32,7 +32,7 @@ script: |
   echo '\n' | pecl install igbinary
 
   #phalconphp
-  git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.2.5
+  git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.3.0
   cd cphalcon/ext;
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
   phpize && ./configure --enable-phalcon && make -j4 && sudo make install
