@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.4.0
+version: 0.4.1
 inherits: wercker/php@1.0.1
 type: box
 platform: ubuntu@12.04
@@ -14,7 +14,7 @@ keywords:
   - igbinary
   - intl
 packages:
-  - phalconphp@1.3.1
+  - phalconphp@1.3.2
 script: |
   # intl
   sudo apt-get install libicu-dev
@@ -33,7 +33,7 @@ script: |
   echo '\n' | pecl install igbinary
 
   #phalconphp
-  git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.3.1
+  git clone -q --depth=1 https://github.com/phalcon/cphalcon.git -b 1.3.2
   cd cphalcon/ext;
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
   phpize && ./configure --enable-phalcon && make -j4 && sudo make install
