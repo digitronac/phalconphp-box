@@ -9,9 +9,11 @@ keywords:
   - php
   - opensource
   - database
+  - imagick
   - apcu
   - memcache
   - igbinary
+  - spl_types
 packages:
   - phalconphp@1.3.2
 script: |
