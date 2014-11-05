@@ -1,5 +1,5 @@
 name: phalconphp
-version: 0.6.4
+version: 0.6.5
 inherits: wercker/php@1.1.0
 type: box
 platform: ubuntu@12.04
