@@ -21,6 +21,7 @@ services:
   - wercker/mysql@1.0.1
   - wercker/redis@1.0.1
 script: |
+  ls /etc
   # imagick
   echo '\n' | pecl install imagick
 
@@ -45,4 +46,3 @@ script: |
   export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall";
   phpize && ./configure --enable-phalcon && make -j4 && sudo make install
   phpenv rehash
-  ls /etc
